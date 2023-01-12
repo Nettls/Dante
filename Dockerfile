@@ -26,7 +26,10 @@ RUN cd /tmp/dante-* &&\
 FROM alpine:latest AS runtime
 
 # Add an unprivileged user.
-RUN apk add --no-cache linux-pam &&\
+RUN apk add --no-cache \
+        linux-pam \
+        ca-certificates \
+        &&\
     adduser -S -D -u 8062 -H sockd
 
 # Default configuration
