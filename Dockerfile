@@ -40,5 +40,4 @@ COPY --from=builder /usr/local/bin/socksify /usr/local/bin/
 COPY --from=builder /usr/local/sbin/sockd   /usr/local/sbin/
 COPY usr/local/bin/entrypoint.sh /usr/local/bin/
 
-ENTRYPOINT /bin/sh
-CMD /usr/local/bin/entrypoint.sh
+ENTRYPOINT /usr/local/bin/entrypoint.sh
